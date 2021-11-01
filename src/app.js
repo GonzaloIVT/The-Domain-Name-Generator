@@ -1,16 +1,29 @@
-function Generador(){
-  let dominio="";
-  let variable_1=["El","Un"];
-  let variable_2=["Ultimo","Mejor","Peor"];
-  let extension=[".com",".cl"];
-  for (let indice_variable1=0;indice_variable1<variable_1.length;indice_variable1++){
-      for (let indice_variable2=0;indice_variable2<variable_2.length;indice_variable2++){
-          for (let indice_variable3=0;indice_variable3<extension.length;indice_variable3++){
-              dominio+=variable_1[indice_variable1]+variable_2[indice_variable2]+extension[indice_variable3];
-              console.log(dominio);
-              dominio="";
-          }
+/* eslint-disable */
+import "bootstrap";
+import "./style.css";
+
+import "./assets/img/rigo-baby.jpg";
+import "./assets/img/4geeks.ico";
+
+window.onload = function() {
+  //write your code here
+  let pronoun = ["the", "our"];
+  let adj = ["great", "big"];
+  let noun = ["jogger", "racoon"];
+  let domain = [".com", ".net", ".cl"];
+  let siteName = [];
+  for (let i = 0; i < pronoun.length; i++) {
+    for (let j in adj) {
+      for (let k in noun) {
+        for (let l in domain) {
+          siteName.push(`${pronoun[i]}${adj[j]}${noun[k]}${domain[l]}`);
+          console.log(siteName);
+          // for (let n in siteName) {
+          //   let randomName = Math.floor(Math.random() * n);
+          //   document.getElementById("domain").innerHTML = siteName[randomName];
+          // }
+        }
       }
+    }
   }
-}
-Generador();
+};
